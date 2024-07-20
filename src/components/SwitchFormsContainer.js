@@ -50,7 +50,7 @@ const Content = styled.div`
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
   @media (max-width: 870px) {
-    padding-right: 15%;
+    padding-right: 20%;
     transition: transform 0.9s ease-in-out;
     transition-delay: 0.8s;
     @media (max-width: 570px) {
@@ -85,7 +85,7 @@ const Title = styled.h3`
   }
 `;
 const Text = styled.p`
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
   margin: 20px 0;
