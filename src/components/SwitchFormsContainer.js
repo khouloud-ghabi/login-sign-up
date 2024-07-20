@@ -34,7 +34,7 @@ pointer-events: ${(props) =>
     props.clicked ? "none" : "all"};
   padding: 3rem 17% 2rem 12%;
   @media (max-width: 870px) {
-    grid-row: 1 / 2;
+    grid-row: 3 / 4;
   }
 `;
 const SignUpPanel = styled(Panel)`

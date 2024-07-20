@@ -23,4 +23,35 @@
   right: 52%;
 }
 
+@media (max-width: 1200px) {
+  .container:before {
+    height: 1500px;
+    width: 1500px;
+    top: -20%;
+  }
+  .sign-up-mode:before {
+    right: 48%;
+  }
+}
 
+@media (max-width: 870px) {
+  .container:before {
+    height: 1200px;
+    width: 1200px;
+    top: -30%;
+  }
+  .sign-up-mode:before {
+    right: 45%;
+  }
+}
+
+@media (max-width: 570px) {
+  .container:before {
+    height: 1000px;
+    width: 1000px;
+    top: -40%;
+  }
+  .sign-up-mode:before {
+    right: 42%;
+  }
+}

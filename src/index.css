@@ -1,23 +1,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   outline: none;
   border: none;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
+
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; /* This makes 1rem equal to 10px */
 }
+
 body {
   font-family: "Nunito Sans", sans-serif;
-  font-size: inherit;
+  font-size: 1.6rem; /* Default font size is 16px */
   letter-spacing: 0.1rem;
   background-color: #f9fcff;
-  color:#062b46;
+  color: #062b46;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 54%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(-45deg, #39a1ff 0%, #099fd1 100%);
+  transition: 1.8s ease-in-out;
+  border-radius: 50%;
+  z-index: 6;
+}
+
+.sign-up-mode:before {
+  transform: translate(100%, -50%);
+  right: 52%;
+}
+
+@media (max-width: 1200px) {
+  .container:before {
+    height: 1500px;
+    width: 1500px;
+    top: -20%;
+  }
+  .sign-up-mode:before {
+    right: 48%;
+  }
+}
+
+@media (max-width: 870px) {
+  .container:before {
+    height: 1200px;
+    width: 1200px;
+    top: -30%;
+  }
+  .sign-up-mode:before {
+    right: 45%;
+  }
+}
+
+@media (max-width: 570px) {
+  .container:before {
+    height: 1000px;
+    width: 1000px;
+    top: -40%;
+  }
+  .sign-up-mode:before {
+    right: 42%;
+  }
 }
