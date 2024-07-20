@@ -21,6 +21,7 @@
 .sign-up-mode:before {
   transform: translate(100%, -50%);
   right: 52%;
+ 
 }
 
 @media (max-width: 1200px) {
