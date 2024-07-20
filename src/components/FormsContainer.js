@@ -1,12 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faLock } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faTwitter, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const Section = styled.section`
   position: absolute;
@@ -15,34 +11,32 @@ const Section = styled.section`
   top: 0;
   left: 0;
 `;
+
 const SignForms = styled.div`
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  left: ${(props) =>
-    props.clicked ? "25%" : "75%"};
+  left: ${(props) => (props.clicked ? "25%" : "75%")};
   width: 50%;
   transition: 1s 0.3s ease-in-out;
   display: grid;
   grid-template-columns: 1fr;
   z-index: 5;
+
   @media (max-width: 870px) {
     width: 100%;
-    top: ${(props) =>
-      props.clicked ? "5%" : "95%"};
-        left: ${(props) =>
-          props.clicked ? "50%" : "50%"};
-          transform: ${(props) =>
-            props.clicked ? "transform: translate(-50%, 0)" : "translate(-50%, -100%)"};
-      transition: 1s 0.8s ease-in-out;
-    }
-    @media (max-width: 570px) {
-      width: 100%;
-      top: ${(props) =>
-        props.clicked ? "35%" : "95%"};
-        
-      }
+    top: ${(props) => (props.clicked ? "5%" : "95%")};
+    left: 50%;
+    transform: ${(props) =>
+      props.clicked ? "translate(-50%, 0)" : "translate(-50%, -100%)"};
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  @media (max-width: 570px) {
+    top: ${(props) => (props.clicked ? "35%" : "95%")};
+  }
 `;
+
 const Form = styled.form`
   display: flex;
   align-items: center;
@@ -53,19 +47,26 @@ const Form = styled.form`
   overflow: hidden;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+
   @media (max-width: 570px) {
-      padding: 0 1.5rem;
+    padding: 0 1.5rem;
+  }
 `;
+
 const SignUpForm = styled(Form)`
-z-index: ${(props) =>
-  props.clicked ? "1" : "2"};
-  opacity: ${(props) =>
-    props.clicked ? "0" : "1"};
+  z-index: ${(props) => (props.clicked ? "1" : "2")};
+  opacity: ${(props) => (props.clicked ? "0" : "1")};
 `;
+
 const Title = styled.h2`
   font-size: 3rem;
   margin-bottom: 10px;
+
+  @media (max-width: 570px) {
+    font-size: 2.5rem;
+  }
 `;
+
 const InputField = styled.div`
   max-width: 380px;
   width: 100%;
@@ -79,13 +80,19 @@ const InputField = styled.div`
   position: relative;
   align-items: center;
   border: 1px solid #97accc;
+
+  @media (max-width: 570px) {
+    padding: 0 1rem;
+  }
 `;
+
 const InputIcon = styled(FontAwesomeIcon)`
   text-align: center;
   transition: 0.5s;
   font-size: 2rem;
   color: #0b4d78;
 `;
+
 const Input = styled.input`
   background: none;
   outline: none;
@@ -97,7 +104,12 @@ const Input = styled.input`
     color: #97accc;
     letter-spacing: 0.1rem;
   }
+
+  @media (max-width: 570px) {
+    font-size: 1.5rem;
+  }
 `;
+
 const Button = styled.button`
   width: 150px;
   background-color: #062b46;
@@ -112,21 +124,33 @@ const Button = styled.button`
   transition: 0.5s;
   letter-spacing: 0.05rem;
   font-size: 1.5rem;
-  &:hover {
-    background-color:#39a1ff;
 
+  &:hover {
+    background-color: #39a1ff;
+  }
+
+  @media (max-width: 570px) {
+    width: 120px;
+    font-size: 1.2rem;
   }
 `;
+
 const Text = styled.p`
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
   margin: 10px 0;
+
+  @media (max-width: 570px) {
+    font-size: 1.4rem;
+  }
 `;
+
 const SocialMedia = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 const SocialIcon = styled(FontAwesomeIcon)`
   height: 2.2rem;
   width: 2.2rem;
@@ -141,46 +165,41 @@ const SocialIcon = styled(FontAwesomeIcon)`
   text-decoration: none;
   transition: 0.3s;
   cursor: pointer;
+
   &:hover {
     color: #4481eb;
     border-color: #4481eb;
   }
-`;
-const SignInForm = styled(Form)`
-  z-index: ${(props) =>
-    props.clicked ? "2" : "1"};
-    opacity: ${(props) =>
-      props.clicked ? "1" : "0"};
-  
+
+  @media (max-width: 570px) {
+    height: 1.8rem;
+    width: 1.8rem;
+    padding: 0.8rem;
+  }
 `;
 
-const FormsContainer = ({isActive}) => {
+const SignInForm = styled(Form)`
+  z-index: ${(props) => (props.clicked ? "2" : "1")};
+  opacity: ${(props) => (props.clicked ? "1" : "0")};
+`;
+
+const FormsContainer = ({ isActive }) => {
   return (
     <Section>
       <SignForms clicked={isActive}>
-        <SignUpForm action='#'  clicked={isActive}>
+        <SignUpForm action="#" clicked={isActive}>
           <Title>Create Account</Title>
           <InputField>
             <InputIcon icon={faEnvelope} />
-            <Input type='email' name='email' id='EmailId' placeholder='Email' />
+            <Input type="email" name="email" id="EmailId" placeholder="Email" />
           </InputField>
           <InputField>
             <InputIcon icon={faUser} />
-            <Input
-              type='text'
-              name='user'
-              id='userId'
-              placeholder='Username'
-            />
+            <Input type="text" name="user" id="userId" placeholder="Username" />
           </InputField>
           <InputField>
             <InputIcon icon={faLock} />
-            <Input
-              type='password'
-              name='password'
-              id='password'
-              placeholder='Password'
-            />
+            <Input type="password" name="password" id="password" placeholder="Password" />
           </InputField>
           <Button>Sign up</Button>
           <Text>Or sign up with a social media account</Text>
@@ -190,25 +209,15 @@ const FormsContainer = ({isActive}) => {
             <SocialIcon icon={faLinkedinIn} />
           </SocialMedia>
         </SignUpForm>
-        <SignInForm action='#'  clicked={isActive}>
+        <SignInForm action="#" clicked={isActive}>
           <Title>Sign in</Title>
           <InputField>
             <InputIcon icon={faUser} />
-            <Input
-              type='text'
-              name='username'
-              id='usernameId'
-              placeholder='Username'
-            />
+            <Input type="text" name="username" id="usernameId" placeholder="Username" />
           </InputField>
           <InputField>
             <InputIcon icon={faLock} />
-            <Input
-              type='password'
-              name='password'
-              id='passwordId'
-              placeholder='Password'
-            />
+            <Input type="password" name="password" id="passwordId" placeholder="Password" />
           </InputField>
           <Button>Sign in</Button>
           <Text>Or sign in with</Text>
@@ -222,4 +231,5 @@ const FormsContainer = ({isActive}) => {
     </Section>
   );
 };
+
 export default FormsContainer;
