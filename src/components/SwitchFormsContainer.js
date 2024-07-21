@@ -160,7 +160,7 @@ const SwitchFormsContainer = ({handleClick,isActive,setActive}) => {
           <Text>Please sign in to access the admin panel</Text>
           <SwitchButton clicked={isActive} onClick={handleClick}>Sign in</SwitchButton>
         </SignInContent>
-        <SignInImage src="images/dashboard.svg" alt="" clicked={isActive}/>
+        <SignInImage src="images/key2.png" alt="" clicked={isActive}/>
       </SignInPanel>
       <SignUpPanel clicked={isActive}>
       <SignUpContent clicked={isActive}>
@@ -168,7 +168,7 @@ const SwitchFormsContainer = ({handleClick,isActive,setActive}) => {
           <Text>Please sign up to unlock the content.</Text>
           <SwitchButton onClick={handleClick} >Sign up</SwitchButton>
         </SignUpContent>
-        <SignUpImage src="images/lockedDashoboard.svg" alt="" clicked={isActive} />
+        <SignUpImage src="images/key1.png" alt="" clicked={isActive} />
       </SignUpPanel>
     </Panels>
   );
