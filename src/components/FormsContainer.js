@@ -126,7 +126,7 @@ const Button = styled.button`
   font-size: 1.5rem;
 
   &:hover {
-    background-color: #39a1ff;
+    background-color: #27DEC0;
   }
 
   @media (max-width: 570px) {
@@ -167,8 +167,8 @@ const SocialIcon = styled(FontAwesomeIcon)`
   cursor: pointer;
 
   &:hover {
-    color: #4481eb;
-    border-color: #4481eb;
+    color: #27DEC0;
+    border-color: #27DEC0;
   }
 
   @media (max-width: 570px) {

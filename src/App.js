@@ -22,7 +22,7 @@ const Container = styled.section`
     content: "";
     position: absolute;
     height: 2200px;
-    width: 3000px;
+    width: 2900px;
     top: -10%;
     right: ${(props) => (props.clicked ? "-90%" : "54%")};
     transform: translateY(-50%);

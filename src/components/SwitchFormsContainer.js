@@ -85,7 +85,7 @@ const Title = styled.h3`
   }
 `;
 const Text = styled.p`
-  font-size: 1.rem;
+  font-size: 3rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
   margin: 20px 0;
@@ -114,7 +114,7 @@ const SwitchButton = styled.button`
     font-size: 0.7rem;
    }
   &:hover {
-    background-color:#3490e3;
+    background-color:#7EEADA;
   }
 `;
 const Image = styled.img`
