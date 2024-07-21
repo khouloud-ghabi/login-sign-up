@@ -22,7 +22,7 @@ const Container = styled.section`
     content: "";
     position: absolute;
     height: 2200px;
-    width: 2200px;
+    width: 3000px;
     top: -10%;
     right: ${(props) => (props.clicked ? "-90%" : "54%")};
     transform: translateY(-50%);
@@ -31,8 +31,8 @@ const Container = styled.section`
     border-radius: 50%;
     z-index: 6;
     @media (max-width: 870px) {
-      width: 1500px;
-      height: 1500px;
+      width: 1800px;
+      height: 1800px;
       left: 30%;
       bottom: 68%;
       top: initial;
