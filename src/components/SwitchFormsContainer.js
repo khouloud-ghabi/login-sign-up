@@ -85,7 +85,7 @@ const Title = styled.h3`
   }
 `;
 const Text = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
   margin: 20px 0;

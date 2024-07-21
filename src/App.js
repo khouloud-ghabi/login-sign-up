@@ -21,12 +21,12 @@ const Container = styled.section`
   &:before {
     content: "";
     position: absolute;
-    height: 2000px;
-    width: 2000px;
+    height: 2200px;
+    width: 2200px;
     top: -10%;
     right: ${(props) => (props.clicked ? "-90%" : "54%")};
     transform: translateY(-50%);
-    background-color: #39a1ff;
+    background-color: #27DEC0;
     transition: 1.2s ease-in-out;
     border-radius: 50%;
     z-index: 6;
